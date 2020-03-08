@@ -16,6 +16,9 @@
   margin: 0;
   padding: 0;
 }
+.bimgs{
+  transition: 0.5s;
+}
 button {
   margin: 10px;
 }
@@ -74,10 +77,12 @@ button {
 
 .trans {
   background-image: linear-gradient(var(--t-blue) 0%, var(--t-blue) 20%, var(--t-pink) 20%, var(--t-pink) 40%, var(--t-white) 40%, var(--t-white) 60%, var(--t-pink) 60%, var(--t-pink) 80%, var(--t-blue) 80%, var(--t-blue) 100%);
+  transition: 0.5s;
 }
 
 .bi {
   background-image: linear-gradient(var(--b-pink) 0%, var(--b-pink) 40%, var(--b-purple) 40%, var(--b-purple) 60%, var(--b-blue) 60%, var(--b-blue) 100%);
+  transition: 0.5s;
 }
 
 .pan {

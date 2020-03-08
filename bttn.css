@@ -125,7 +125,7 @@
 }
 .bttn-simple.bttn-primary,
 .bttn-gradient.bttn-primary {
- /* background: ; */
+  background: rgba(88, 88, 88, 0.4);
 }
 .bttn-simple.bttn-warning,
 .bttn-gradient.bttn-warning {
