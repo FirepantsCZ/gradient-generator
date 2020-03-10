@@ -16,27 +16,30 @@
 transition: background-image 0.2s ease-in-out;background-image: -webkit-linear-gradient(#12c2e9, #c471ed, #f64f59);">
   <img style="opacity: 0; position: absolute; width: 100%; height: 100%; top: 0px;" id="bimg" class="bimgs"></img>
   <div style="opacity: 0;" id="bib" class="banner bi u-mb3" width="100%" height="100px">
-  <div style="opacity: 0; position: absolute; width: 100%; height: 100%; top: 0px;" id="bib2" class="banner trans u-mb3"></div>
+    <div style="opacity: 0; position: absolute; width: 100%; height: 100%; top: 0px;" id="bib2"
+      class="banner trans u-mb3"></div>
   </div>
   <div class="buts">
-    <button data-html2canvas-ignore="true" id="but" class="bttn-simple bttn-md bttn-primary"
-      >Manual color</button></br>
+    <button data-html2canvas-ignore="true" id="but" class="bttn-simple bttn-md bttn-primary">Manual color</button></br>
     <button data-html2canvas-ignore="true" id="rst" onclick="reset()"
       class="bttn-simple bttn-md bttn-primary">Reset</button></br>
     <button data-html2canvas-ignore="true" id="bibut" onclick="bivis();"
       class="bttn-simple bttn-md bttn-primary">:)</button></br>
-      <button data-html2canvas-ignore="true" id="transbut" onclick="transvis();"
-        class="bttn-simple bttn-md bttn-primary">:]</button></br>
+    <button data-html2canvas-ignore="true" id="transbut" onclick="transvis();"
+      class="bttn-simple bttn-md bttn-primary">:]</button></br>
     <button data-html2canvas-ignore="true" id="randbut" onclick="setRandomColor();"
       class="bttn-simple bttn-md bttn-primary">Random color</button></br>
     <button data-html2canvas-ignore="true" id="randbut2" onclick="setRandomColorGrad();"
       class="bttn-simple bttn-md bttn-primary">Random gradient</button></br>
     <button data-html2canvas-ignore="true" id="scr" onclick="scren();" class="bttn-simple bttn-md bttn-primary">View
       image</button>
-  </div>
-  <div>
-    
-  </div>
+      <img onclick="setPrevGrad1()" class="imgs" data-html2canvas-ignore="true" id="img1" style="right: 70%;"
+        src="https://via.placeholder.com/1920x983">
+      <img onclick="setPrevGrad2()" class="imgs" data-html2canvas-ignore="true" id="img2" style="right: 40%;"
+        src="https://via.placeholder.com/1920x983">
+      <img onclick="setPrevGrad3()" class="imgs" data-html2canvas-ignore="true" id="img3" style="right: 10%;"
+        src="https://via.placeholder.com/1920x983">
+    </div>
 </body>
 
 </html>

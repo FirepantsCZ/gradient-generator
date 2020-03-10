@@ -1,3 +1,20 @@
+var iter = 1;
+var bgiter = 1;
+
+var image = null;
+var lastimage = null;
+var lastimage2 = null;
+
+var currimage1grad1 = null;
+var currimage1grad2 = null;
+
+var histimage1grad1 = null;
+var histimage1grad2 = null;
+var histimage2grad1 = null;
+var histimage2grad2 = null;
+var histimage3grad1 = null;
+var histimage3grad2 = null;
+
 function openInNewTab(url) {
     var win = window.open(url, '_blank');
     win.focus();
@@ -25,7 +42,9 @@ function scrennop() {
     }).then(function (canvas) {
         // document.body.appendChild(canvas);
         canvas.style.border = "none";
-        var image = canvas.toDataURL("image/png");
+        lastimage2 = lastimage;
+        lastimage = image;
+        image = canvas.toDataURL("image/png");
         document.getElementById("bimg").src = image;
         // document.getElementById("bimg").style.zIndex = 1;
         // window.open(window.location.href = image);
@@ -45,8 +64,47 @@ function setRandomColorGrad() {
         console.log("afterscren");
         document.getElementById("bimg").style.opacity = "1";
         setTimeout(function () {
-            document.body.style.backgroundImage = "-webkit-linear-gradient(" + getRandomColor() + " , " + getRandomColor() + ")";
+            if (bgiter == 1) {
+                histimage3grad1 = histimage2grad1;
+                histimage3grad2 = histimage2grad2;
+
+                histimage2grad1 = histimage1grad1;
+                histimage2grad2 = histimage1grad2;
+
+                histimage1grad1 = currimage1grad1
+                histimage1grad2 = currimage1grad2;
+
+                currimage1grad1 = getRandomColor();
+                currimage1grad2 = getRandomColor();
+                document.body.style.backgroundImage = "-webkit-linear-gradient(" + currimage1grad1 + " , " + currimage1grad2 + ")";
+            }
+            else if (bgiter == 2) {
+
+            }
+            else if (bgiter == 3) {
+
+            }
             document.getElementById("bimg").style.opacity = "0";
+            console.log(iter);
+            if (iter == 1) {
+                document.getElementById("img1").src = image;
+                document.getElementById("img1").style.opacity = "1";
+                document.getElementById("img2").src = lastimage;
+                document.getElementById("img3").src = lastimage2;
+                if (lastimage != null) {
+                    document.getElementById("img2").style.opacity = "1";
+                }
+                if (lastimage2 != null) {
+                    document.getElementById("img3").style.opacity = "1";
+                }
+            }
+            else if (iter == 2) {
+
+            }
+            else if (iter == 3) {
+
+            }
+            console.log(iter);
         }, 510);
     }, 510);
 }
@@ -110,4 +168,19 @@ function getOffset(el) {
         left: rect.left + window.scrollX,
         top: rect.top + window.scrollY
     };
+}
+function setPrevGrad1() {
+    document.body.style.backgroundImage = "-webkit-linear-gradient(" + histimage1grad1 + " , " + histimage1grad2 + ")";
+    currimage1grad1 = histimage1grad1;
+    currimage1grad2 = histimage1grad2;
+}
+function setPrevGrad2() {
+    document.body.style.backgroundImage = "-webkit-linear-gradient(" + histimage2grad1 + " , " + histimage2grad2 + ")";
+    currimage1grad1 = histimage2grad1;
+    currimage1grad2 = histimage2grad2;
+}
+function setPrevGrad3() {
+    document.body.style.backgroundImage = "-webkit-linear-gradient(" + histimage3grad1 + " , " + histimage3grad2 + ")";
+    currimage1grad1 = histimage3grad1;
+    currimage1grad2 = histimage3grad2;
 }
