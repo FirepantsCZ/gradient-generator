@@ -33,13 +33,22 @@ transition: background-image 0.2s ease-in-out;background-image: -webkit-linear-g
       class="bttn-simple bttn-md bttn-primary">Random gradient</button></br>
     <button data-html2canvas-ignore="true" id="scr" onclick="scren();" class="bttn-simple bttn-md bttn-primary">View
       image</button>
-      <img onclick="setPrevGrad1()" class="imgs" data-html2canvas-ignore="true" id="img1" style="right: 70%;"
-        src="https://via.placeholder.com/1920x983">
-      <img onclick="setPrevGrad2()" class="imgs" data-html2canvas-ignore="true" id="img2" style="right: 40%;"
-        src="https://via.placeholder.com/1920x983">
-      <img onclick="setPrevGrad3()" class="imgs" data-html2canvas-ignore="true" id="img3" style="right: 10%;"
-        src="https://via.placeholder.com/1920x983">
+    <img onclick="setPrevGrad1()" onmouseover="overlay(1)" onmouseout="overlayleave(1)" class="imgs"
+      data-html2canvas-ignore="true" id="img1" style="right: 70%;" src="https://via.placeholder.com/1920x983">
+    <div data-html2canvas-ignore="true" class="overlay overlay1" id="overlay1">
+      <p class="overtext" id="over1text">Click to set</p>
     </div>
+    <img onclick="setPrevGrad2()" onmouseover="overlay(2)" onmouseout="overlayleave(2)" class="imgs"
+      data-html2canvas-ignore="true" id="img2" style="right: 40%;" src="https://via.placeholder.com/1920x983">
+    <div data-html2canvas-ignore="true" class="overlay overlay2" id="overlay2">
+      <p class="overtext" id="over1text">Click to set</p>
+    </div>
+    <img onclick="setPrevGrad3()" onmouseover="overlay(3)" onmouseout="overlayleave(3)" class="imgs"
+      data-html2canvas-ignore="true" id="img3" style="right: 10%;" src="https://via.placeholder.com/1920x983">
+    <div data-html2canvas-ignore="true" class="overlay overlay3" id="overlay3">
+      <p class="overtext" id="over1text">Click to set</p>
+    </div>
+  </div>
 </body>
 
 </html>

@@ -1,6 +1,8 @@
 var iter = 1;
 var bgiter = 1;
 
+var timeflag = false;
+
 var image = null;
 var lastimage = null;
 var lastimage2 = null;
@@ -183,4 +185,62 @@ function setPrevGrad3() {
     document.body.style.backgroundImage = "-webkit-linear-gradient(" + histimage3grad1 + " , " + histimage3grad2 + ")";
     currimage1grad1 = histimage3grad1;
     currimage1grad2 = histimage3grad2;
+}
+function overlay(num) {
+    if (num == 1 && image != null) {
+        document.getElementById("overlay" + num).style.transform = "scale(1.7)";
+        document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        document.getElementById("overlay" + num).style.zIndex = 3;
+        document.getElementById("overlay" + num).style.opacity = 1;
+        document.getElementById("over1text").style.opacity = 1;
+    }
+    else if (num == 2 && lastimage != null) {
+        document.getElementById("overlay" + num).style.transform = "scale(1.7)";
+        document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        document.getElementById("overlay" + num).style.zIndex = 3;
+        document.getElementById("overlay" + num).style.opacity = 1;
+        document.getElementById("over1text").style.opacity = 1;
+    }
+    else if (num == 3 && lastimage2 != null) {
+        document.getElementById("overlay" + num).style.transform = "scale(1.7)";
+        document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        document.getElementById("overlay" + num).style.zIndex = 3;
+        document.getElementById("overlay" + num).style.opacity = 1;
+        document.getElementById("over1text").style.opacity = 1;
+    }
+    else {
+        console.log("what the actual fuck did you do, you weren't supposed to see this")
+    }
+}
+function overlayleave(num) {
+    if (image != null)  {
+        document.getElementById("overlay" + num).style.transform = "scale(1)";
+        document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0)";
+        document.getElementById("overlay" + num).style.opacity = 0;
+        document.getElementById("overlay" + num).style.zIndex = 1;
+        console.log("fuckwad")
+    }
+}
+function checktimeflag() {
+    if (timeflag == true) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function checktimerep() {
+    if (checktimeflag() != true) {
+        console.log("the second coming of ass");
+    }
+    else {
+        checktimerep();
+    }
+}
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
 }

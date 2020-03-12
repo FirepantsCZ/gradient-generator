@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap');
 /* @use cssnext; */
 
 /*!
@@ -24,46 +25,61 @@
   transition: 0.5s;
 }
 
+.overtext {
+  font-family: 'Raleway', sans-serif;
+}
+
 .imgs {
   border-color: rgba(88, 88, 88, 0.4);
   border-style: solid;
   position: absolute;
+  width: 289px;
   height: 200px;
   top: 55%;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
   transition: 0.5s;
 }
-
-.imgs:hover .overlay1 {
-  opacity: 1;
-  background: red;
-  transition: 0.5s;
-}
-
-
 
 .imgs:hover {
   transition: 0.5s;
   transform: scale(1.7);
 }
 
-.overlay1 {
+.overtext {
+  position: absolute;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  top: 35%;
+  left: 35%;
+}
+
+.overlay {
+  pointer-events: none;
+  text-align: center;
   border-color: black;
   border-style: solid;
-  opacity: 1;
+  opacity: 0;
   position: absolute;
-  background: black;
+  background: rgba(0, 0, 0, 1);
   width: 288.917px;
   height: 200px;
-  right: 70%;
   top: 55%;
-  z-index: 2;
+  z-index: 1;
   transition: 0.5s;
 }
 
-.overlay1:hover {
-  background: red;
+.overlay1 {
+  right: 70%;
+}
+
+.overlay2 {
+  right: 40%;
+}
+
+.overlay3 {
+  right: 10%;
 }
 
 /* .container {
