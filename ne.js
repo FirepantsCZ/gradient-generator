@@ -142,6 +142,9 @@ window.onload = function () {
      console.log(getOffset(document.getElementById("bib2")).right);
      console.log(getOffset(document.getElementById("bib2")).top);
      console.log(getOffset(document.getElementById("bib2")).bottom); */
+     setTimeout(function() {
+         document.getElementById("headerr").style.opacity = 0;
+     }, 3000);
 }
 function changeBackground(color) {
     document.body.style.background = color;
@@ -188,25 +191,13 @@ function setPrevGrad3() {
 }
 function overlay(num) {
     if (num == 1 && image != null) {
-        document.getElementById("overlay" + num).style.transform = "scale(1.7)";
-        document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-        document.getElementById("overlay" + num).style.zIndex = 3;
-        document.getElementById("overlay" + num).style.opacity = 1;
-        document.getElementById("over1text").style.opacity = 1;
+        overactive(num);
     }
     else if (num == 2 && lastimage != null) {
-        document.getElementById("overlay" + num).style.transform = "scale(1.7)";
-        document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-        document.getElementById("overlay" + num).style.zIndex = 3;
-        document.getElementById("overlay" + num).style.opacity = 1;
-        document.getElementById("over1text").style.opacity = 1;
+        overactive(num);
     }
     else if (num == 3 && lastimage2 != null) {
-        document.getElementById("overlay" + num).style.transform = "scale(1.7)";
-        document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-        document.getElementById("overlay" + num).style.zIndex = 3;
-        document.getElementById("overlay" + num).style.opacity = 1;
-        document.getElementById("over1text").style.opacity = 1;
+        overactive(num);
     }
     else {
         console.log("what the actual fuck did you do, you weren't supposed to see this")
@@ -243,4 +234,12 @@ function sleep(milliseconds) {
     do {
         currentDate = Date.now();
     } while (currentDate - date < milliseconds);
+}
+function overactive(num) {
+    document.getElementById("overlay" + num).style.transform = "scale(1.7)";
+    document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    document.getElementById("overlay" + num).style.zIndex = 3;
+    document.getElementById("overlay" + num).style.opacity = 1;
+    document.getElementById("img" + num).style.cursor = "pointer";
+    document.getElementById("over1text").style.opacity = 1;
 }
