@@ -80,6 +80,20 @@ body {
   transition: 0.5s;
 }
 
+.topmenu {  
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 20px;
+  margin-top: 20px;
+  opacity: 0.4;
+}
+
+.backarrow {
+  height: 50px;
+  cursor: pointer;
+}
+
 .img1 {
   left: 0;
   right: 50%;

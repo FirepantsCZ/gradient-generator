@@ -245,3 +245,6 @@ function overactive(num) {
     document.getElementById("img" + num).style.cursor = "pointer";
     document.getElementById("over1text").style.opacity = 1;
 }
+function goHome() {
+    window.open("https://fee71951.ngrok.io", "_self")
+}
