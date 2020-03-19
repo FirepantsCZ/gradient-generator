@@ -94,6 +94,7 @@
 .bttn-simple:focus,
 .bttn-gradient:focus {
   opacity: 0.75;
+  transform: scale(1.1);
 }
 .bttn-simple.bttn-xs,
 .bttn-gradient.bttn-xs {
