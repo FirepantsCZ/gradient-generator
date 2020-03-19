@@ -209,6 +209,7 @@ function overlayleave(num) {
         document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0)";
         document.getElementById("overlay" + num).style.opacity = 0;
         document.getElementById("overlay" + num).style.zIndex = 1;
+        document.getElementById("img" + num).style.zIndex = 2;
         console.log("fuckwad")
     }
 }
@@ -238,8 +239,9 @@ function sleep(milliseconds) {
 function overactive(num) {
     document.getElementById("overlay" + num).style.transform = "scale(1.7)";
     document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    document.getElementById("overlay" + num).style.zIndex = 3;
+    document.getElementById("overlay" + num).style.zIndex = 4;
     document.getElementById("overlay" + num).style.opacity = 1;
+    document.getElementById("img" + num).style.zIndex = 3;
     document.getElementById("img" + num).style.cursor = "pointer";
     document.getElementById("over1text").style.opacity = 1;
 }
