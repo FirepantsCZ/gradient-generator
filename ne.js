@@ -237,7 +237,7 @@ function sleep(milliseconds) {
     } while (currentDate - date < milliseconds);
 }
 function overactive(num) {
-    document.getElementById("overlay" + num).style.transform = "scale(1.7)";
+    document.getElementById("overlay" + num).style.transform = "scale(1.4)";
     document.getElementById("overlay" + num).style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     document.getElementById("overlay" + num).style.zIndex = 4;
     document.getElementById("overlay" + num).style.opacity = 1;
