@@ -34,13 +34,25 @@ body {
   /*I'll probably find this useful sometime sooner or later in the future */
 }
 
+.imgcenter {
+  width: 100%;
+  height: 50%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .headerr {
   background: rgba(88, 88, 88, 0.4);
   border-radius: 15px;
   position: absolute;
   text-align: center;
   top: 10%;
-  left: 36%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   color: white;
   width: 400px;
   height: 50px;
@@ -50,7 +62,10 @@ body {
 .headtext {
   position: absolute;
   top: 10%;
-  left: 5%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .imgs {
@@ -63,6 +78,27 @@ body {
   opacity: 0;
   z-index: 2;
   transition: 0.5s;
+}
+
+.img1 {
+  left: 0;
+  right: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img2 {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img3 {
+  left: 50%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .imgs:hover {
@@ -92,18 +128,6 @@ body {
   top: 55%;
   z-index: 1;
   transition: 0.5s;
-}
-
-.overlay1 {
-  right: 70%;
-}
-
-.overlay2 {
-  right: 40%;
-}
-
-.overlay3 {
-  right: 10%;
 }
 
 /* .container {

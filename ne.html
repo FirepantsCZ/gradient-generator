@@ -19,38 +19,40 @@ transition: background-image 0.2s ease-in-out;background-image: -webkit-linear-g
     <div style="opacity: 0; position: absolute; width: 100%; height: 100%; top: 0px;" id="bib2"
       class="banner trans u-mb3"></div>
   </div>
-  <div id="headerr" class="headerr">
+  <div data-html2canvas-ignore="true" id="headerr" class="headerr">
     <h1 class="headtext">Gradient generator v0.1</h1>
-  </div> 
+  </div>
   <div class="buts">
-    <button data-html2canvas-ignore="true" id="but" class="bttn-simple bttn-md bttn-primary">Manual color</button></br>
-    <button data-html2canvas-ignore="true" id="rst" onclick="reset()"
-      class="bttn-simple bttn-md bttn-primary">Reset</button></br>
-    <button data-html2canvas-ignore="true" id="bibut" onclick="bivis();"
-      class="bttn-simple bttn-md bttn-primary">:)</button></br>
-    <button data-html2canvas-ignore="true" id="transbut" onclick="transvis();"
-      class="bttn-simple bttn-md bttn-primary">:]</button></br>
-    <button data-html2canvas-ignore="true" id="randbut" onclick="setRandomColor();"
-      class="bttn-simple bttn-md bttn-primary">Random color</button></br>
-    <button data-html2canvas-ignore="true" id="randbut2" onclick="setRandomColorGrad();"
-      class="bttn-simple bttn-md bttn-primary">Random gradient</button></br>
-    <button data-html2canvas-ignore="true" id="scr" onclick="scren();" class="bttn-simple bttn-md bttn-primary">View
-      image</button>
-    <img onclick="setPrevGrad1()" onmouseover="overlay(1)" onmouseout="overlayleave(1)" class="imgs"
-      data-html2canvas-ignore="true" id="img1" style="right: 70%;" src="https://via.placeholder.com/1920x983">
-    <div data-html2canvas-ignore="true" class="overlay overlay1" id="overlay1">
+  <button data-html2canvas-ignore="true" id="but" class="bttn-simple bttn-md bttn-primary">Manual color</button></br>
+  <button data-html2canvas-ignore="true" id="rst" onclick="reset()"
+    class="bttn-simple bttn-md bttn-primary">Reset</button></br>
+  <button data-html2canvas-ignore="true" id="bibut" onclick="bivis();"
+    class="bttn-simple bttn-md bttn-primary">:)</button></br>
+  <button data-html2canvas-ignore="true" id="transbut" onclick="transvis();"
+    class="bttn-simple bttn-md bttn-primary">:]</button></br>
+  <button data-html2canvas-ignore="true" id="randbut" onclick="setRandomColor();"
+    class="bttn-simple bttn-md bttn-primary">Random color</button></br>
+  <button data-html2canvas-ignore="true" id="randbut2" onclick="setRandomColorGrad();"
+    class="bttn-simple bttn-md bttn-primary">Random gradient</button></br>
+  <button data-html2canvas-ignore="true" id="scr" onclick="scren();" class="bttn-simple bttn-md bttn-primary">View
+    image</button>
+  <div class="imgcenter">
+    <img onclick="setPrevGrad1()" onmouseover="overlay(1)" onmouseout="overlayleave(1)" class="imgs img1"
+      data-html2canvas-ignore="true" id="img1" src="https://via.placeholder.com/1920x983">
+    <div data-html2canvas-ignore="true" class="overlay img1" id="overlay1">
       <p class="overtext" id="over1text">Click to set</p>
     </div>
-    <img onclick="setPrevGrad2()" onmouseover="overlay(2)" onmouseout="overlayleave(2)" class="imgs"
-      data-html2canvas-ignore="true" id="img2" style="right: 40%;" src="https://via.placeholder.com/1920x983">
-    <div data-html2canvas-ignore="true" class="overlay overlay2" id="overlay2">
+    <img onclick="setPrevGrad2()" onmouseover="overlay(2)" onmouseout="overlayleave(2)" class="imgs img2"
+      data-html2canvas-ignore="true" id="img2" src="https://via.placeholder.com/1920x983">
+    <div data-html2canvas-ignore="true" class="overlay img2" id="overlay2">
       <p class="overtext" id="over1text">Click to set</p>
     </div>
-    <img onclick="setPrevGrad3()" onmouseover="overlay(3)" onmouseout="overlayleave(3)" class="imgs"
-      data-html2canvas-ignore="true" id="img3" style="right: 10%;" src="https://via.placeholder.com/1920x983">
-    <div data-html2canvas-ignore="true" class="overlay overlay3" id="overlay3">
+    <img onclick="setPrevGrad3()" onmouseover="overlay(3)" onmouseout="overlayleave(3)" class="imgs img3"
+      data-html2canvas-ignore="true" id="img3" src="https://via.placeholder.com/1920x983">
+    <div data-html2canvas-ignore="true" class="overlay img3" id="overlay3">
       <p class="overtext" id="over1text">Click to set</p>
     </div>
+  </div>
   </div>
 </body>
 
