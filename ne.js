@@ -200,7 +200,7 @@ function overlay(num) {
         overactive(num);
     }
     else {
-        console.log("what the actual fuck did you do, you weren't supposed to see this")
+        console.log("ne")
     }
 }
 function overlayleave(num) {
@@ -210,7 +210,7 @@ function overlayleave(num) {
         document.getElementById("overlay" + num).style.opacity = 0;
         document.getElementById("overlay" + num).style.zIndex = 1;
         document.getElementById("img" + num).style.zIndex = 2;
-        console.log("fuckwad")
+        console.log("ok 1")
     }
 }
 function checktimeflag() {
@@ -223,7 +223,7 @@ function checktimeflag() {
 }
 function checktimerep() {
     if (checktimeflag() != true) {
-        console.log("the second coming of ass");
+        console.log("ok 2");
     }
     else {
         checktimerep();
