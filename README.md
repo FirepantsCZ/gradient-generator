@@ -1,3 +1,3 @@
 # gradient-generator
 
-yes fuck off
+ok
